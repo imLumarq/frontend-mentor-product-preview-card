@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --border-radius: 1rem;
+  --gap: 1rem;
+  --padding: 2rem;
+
+  /*Colors*/
+
+  --accent-color: 158, 36%, 37%;
+  --bg-color: 30, 38%, 92%;
+  --body-text-color: 228, 12%, 48%;
+  --card-color: 0, 0%, 100%;
+  --heading-text-color: 212, 21%, 14%;
+
+  /*Typography*/
+
+  /*14px paragraph*/
+  --font-size: 14px;
+  --primary-font-family: "Montserrat", sans-serif;
+  --secondary-font-family: "Fraunces", serif;
+  --weight-500: 500;
+  --weight-700: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: hsl(var(--bg-color));
+  color-scheme: light only;
+  font-family: var(--primary-font-family);
+  font-size: var(--font-size);
+  color: hsl(var(--body-text-color));
+}
+
+html,
+body,
+main {
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: hsl(var(--card-color));
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 37.5rem;
+  /*600px*/
+  overflow: hidden;
+  width: 90%;
+}
+
+.card-image {
+  flex: 1 1 50%;
+}
+
+.perfume-image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-info {
+  display: grid;
+  flex: 1 1 50%;
+  gap: var(--gap);
+  padding: var(--padding);
+}
+
+.info-span {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.info-heading {
+  font-family: var(--secondary-font-family);
+  font-size: xx-large;
+  color: hsl(var(--heading-text-color));
+  text-transform: capitalize;
+}
+
+.price-list {
+  align-items: center;
+  display: flex;
+  font-family: var(--secondary-font-family);
+  gap: var(--gap);
+  list-style-type: none;
+}
+
+.sale-price {
+  color: hsl(var(--accent-color));
+  font-size: x-large;
+}
+
+.og-price {
+  font-size: x-small;
+  font-weight: var(--weight-500);
+  text-decoration: line-through;
+}
+
+.btn {
+  background-color: hsl(var(--accent-color));
+  border-radius: var(--border-radius);
+  border: none;
+  color: hsl(var(--card-color));
+  cursor: pointer;
+  font-family: var(--primary-font-family);
+  font-size: var(--font-size);
+  font-weight: var(--weight-700);
+  padding: calc(var(--padding) / 2);
+}
+
+.btn-span {
+  vertical-align: top;
+}
+
+/*active state*/
+.btn:active,
+.btn:focus {
+  --_active-accent-color: 156, 79%, 9%;
+  background-color: hsl(var(--_active-accent-color));
+}
