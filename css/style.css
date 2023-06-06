@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
 
 :root {
-  --border-radius: 1rem;
+  --border-radius: 0.5rem;
   --gap: 1rem;
   --padding: 2rem;
 
@@ -32,9 +32,9 @@
 html {
   background-color: hsl(var(--bg-color));
   color-scheme: light only;
+  color: hsl(var(--body-text-color));
   font-family: var(--primary-font-family);
   font-size: var(--font-size);
-  color: hsl(var(--body-text-color));
 }
 
 html,
@@ -53,10 +53,9 @@ main {
   border-radius: var(--border-radius);
   display: flex;
   flex-wrap: wrap;
-  max-width: 37.5rem;
-  /*600px*/
+  max-width: 600px;
   overflow: hidden;
-  width: 90%;
+  width: 93%;
 }
 
 .card-image {
@@ -77,15 +76,20 @@ main {
 }
 
 .info-span {
-  text-transform: uppercase;
   letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
 .info-heading {
+  color: hsl(var(--heading-text-color));
   font-family: var(--secondary-font-family);
   font-size: xx-large;
-  color: hsl(var(--heading-text-color));
+  line-height: 1;
   text-transform: capitalize;
+}
+
+.info-paragraph {
+  line-height: 1.5;
 }
 
 .price-list {
@@ -98,11 +102,10 @@ main {
 
 .sale-price {
   color: hsl(var(--accent-color));
-  font-size: x-large;
+  font-size: xx-large;
 }
 
 .og-price {
-  font-size: x-small;
   font-weight: var(--weight-500);
   text-decoration: line-through;
 }
@@ -116,7 +119,7 @@ main {
   font-family: var(--primary-font-family);
   font-size: var(--font-size);
   font-weight: var(--weight-700);
-  padding: calc(var(--padding) / 2);
+  padding: calc(var(--padding) / 2.6);
 }
 
 .btn-span {
